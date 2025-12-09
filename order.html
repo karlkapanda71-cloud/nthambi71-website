@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order - Nthambi71 Printers</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header, footer {
+      background-color: #003366; /* deep blue */
+      color: #FFD700; /* gold */
+      text-align: center;
+      padding: 15px 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a.active {
+      text-decoration: underline;
+    }
+
+    section {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 15px;
+      border: 2px solid #FFD700;
+    }
+
+    h1 {
+      text-align: center;
+      color: #003366;
+      margin-bottom: 25px;
+    }
+
+    .order-form input, .order-form select, .order-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 2px solid #003366;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .order-form button {
+      width: 100%;
+      background-color: #FFD700;
+      color: #003366;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .order-form button:hover {
+      background-color: #FFC107;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Nthambi71 Printers</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="order.html" class="active">Order</a></li>
+        <li><a href="samples.html">Samples</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="order-page">
+    <h1>Place Your Order</h1>
+    <form class="order-form" action="send_email.php" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="phone" placeholder="Your Phone Number" required>
+      
+      <select name="service" required>
+        <option value="">Select Service</option>
+        <option value="Typing and Printing">Typing and Printing - K800</option>
+        <option value="Black & White Photocopying">Black & White Photocopying - K200</option>
+        <option value="Colour Photocopying">Colour Photocopying - K500</option>
+        <option value="Photo Printing">Photo Printing (A4) - K3,000</option>
+        <option value="Graphic Designing">Graphic Designing (Wedding Cards & Social Media Flyers) - K5,000</option>
+        <option value="Printing Wedding Cards">Printing Wedding Cards - Price depending on quantity</option>
+        <option value="Designing Birthday Cards">Designing Birthday Cards - K3,000</option>
+        <option value="Printing Birthday Cards">Printing Birthday Cards - Price depending on quantity</option>
+        <option value="Designing Stickers">Designing Stickers - K3,000</option>
+        <option value="Printing Stickers">Printing Stickers - Price depending on size & quantity</option>
+        <option value="IDs for Workplaces & Schools">IDs (Designing & Printing) - K12,000</option>
+        <option value="Lamination A4">Lamination A4 - K1,500</option>
+        <option value="ID Lamination">ID Lamination - K750</option>
+        <option value="Exam Printing">Exam Printing - Negotiable</option>
+        <option value="T-shirt Printing">T-shirt Printing - K15,000</option>
+        <option value="Logo Designs">Logo Designs - K10,000</option>
+        <option value="Photo Retouch">Photo Retouch - K1,000 per picture</option>
+        <option value="Web Designing Static">Web Designing (Static) - K100,000</option>
+      </select>
+
+      <textarea name="details" placeholder="Provide details of your order" rows="5" required></textarea>
+      <button type="submit">Submit Order</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Nthambi71 Printers. All rights reserved.</p>
+  </footer>
+</body>
+</html>
